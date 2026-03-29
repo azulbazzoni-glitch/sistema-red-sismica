@@ -4,38 +4,49 @@ Proyecto desarrollado en equipo en el marco de la materia Diseño de Sistemas de
 
 ## Descripción
 
-Este sistema simula la gestión y procesamiento de información proveniente de una red sísmica. Permite modelar, registrar y analizar datos relacionados con eventos sísmicos, estaciones de monitoreo y su comportamiento.
+Este sistema simula la gestión y procesamiento de información proveniente de una red sísmica. Permite registrar, modelar y analizar datos relacionados con eventos sísmicos, estaciones de monitoreo y su comportamiento.
 
-El proyecto está orientado a representar un entorno real de trabajo, aplicando conceptos de análisis, diseño y desarrollo de sistemas.
+El proyecto representa un entorno real de trabajo, aplicando conceptos de diseño de sistemas, arquitectura en capas y desarrollo backend.
 
 ## Funcionalidades
 
-- Gestión de datos de estaciones sísmicas
+- Gestión de estaciones sísmicas
 - Registro y procesamiento de eventos sísmicos
-- Modelado de entidades del dominio
-- Aplicación de lógica de negocio sobre los datos
-- Simulación de un sistema de monitoreo
+- Persistencia de datos en base de datos
+- Separación por capas (presentación, lógica de negocio, persistencia)
+- Inicialización de base de datos
 
 ## Tecnologías utilizadas
 
-- (completar según corresponda: lenguaje, base de datos, etc.)
-- Git (trabajo colaborativo)
+- Java
+- Spring Boot
+- Maven
+- MySQL
+- JUnit (tests)
+- Git (control de versiones)
+
+## Arquitectura
+
+El proyecto sigue una estructura por capas:
+
+- **presentation** → interacción con el usuario
+- **gestores** → lógica de negocio
+- **domain** → entidades del sistema
+- **persistence** → acceso a datos
+- **config** → configuración e inicialización
 
 ## Mi participación
 
 - Desarrollo de funcionalidades del sistema
-- Implementación de lógica en código
-- Participación en el modelado del sistema
-- Trabajo en equipo utilizando control de versiones (Git)
+- Implementación de lógica de negocio
+- Trabajo sobre la estructura del sistema
+- Uso de Git para trabajo colaborativo
 
-## Objetivo
+## Cómo ejecutar el proyecto
 
-Aplicar conocimientos de diseño y desarrollo de sistemas en un caso práctico basado en un problema real, fortaleciendo habilidades técnicas y de trabajo en equipo.
+1. Clonar el repositorio
+2. Configurar la base de datos MySQL
+3. Ejecutar el proyecto con Maven:
 
-## Equipo
-
-Proyecto realizado en conjunto con otros estudiantes de la carrera Ingeniería en Sistemas de Información.
-
-## 📌 Nota
-
-Este proyecto corresponde a una instancia académica y fue desarrollado con fines educativos.
+```bash
+mvn spring-boot:run
